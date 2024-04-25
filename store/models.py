@@ -291,13 +291,12 @@ class Product(models.Model):
     #     new_price = ((self.old_price - self.price) / self.old_price) * 100
     #     return round(new_price, 0)
 
-    def get_percentage(self):
+    def get_precentage(self):
         if self.old_price == 0:
             return 0
         else:
             new_price = ((self.old_price - self.price) / self.old_price) * 100
             return round(new_price, 0)
-
 
     
     # Calculates the average rating of the product
